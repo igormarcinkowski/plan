@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   update:
@@ -33,6 +35,11 @@ jobs:
       - name: Wygeneruj stronę
         run: python pobierz.py
 
+      - name: Przygotuj stronę
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: data/strona
+
       - name: Zapisz zmiany
         run: |
           git config user.name "github-actions[bot]"
@@ -40,3 +47,20 @@ jobs:
           git add data/
           git diff --cached --quiet || git commit -m "Automatyczna aktualizacja danych"
           git push
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Opublikuj stronę
+        id: deployment
+        uses: actions/deploy-pages@v4
