@@ -1,0 +1,70 @@
+name: Aktualizuj stronę
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Ustaw Pythona
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Zainstaluj biblioteki
+        run: pip install -r requirements.txt
+
+      - name: Pobierz plan
+        run: python plan.py
+
+      - name: Pobierz zastępstwa
+        run: python zastepstwa.py
+
+      - name: Wygeneruj stronę
+        run: python pobierz.py
+
+      - name: Zapisz zmiany
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Automatyczna aktualizacja danych"
+          git push
+
+      - name: Przygotuj stronę
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: data/strona
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Opublikuj stronę
+        id: deployment
+        uses: actions/deploy-pages@v5
