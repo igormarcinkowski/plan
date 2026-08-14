@@ -1,0 +1,410 @@
+[
+    [
+        "D Czyżewski",
+        "0",
+        "3 H(1)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Czyżewski",
+        "1",
+        "3 H(1)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Czyżewski",
+        "2",
+        "3 A(1)",
+        "Hala3",
+        "D. Wróblewska",
+        "za nieobecny oddział"
+    ],
+    [
+        "D Czyżewski",
+        "3",
+        "3 A(1)",
+        "Hala3",
+        "D. Wróblewska",
+        "za nieobecny oddział"
+    ],
+    [
+        "D Czyżewski",
+        "4",
+        "2 E(1)",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Czyżewski",
+        "5",
+        "1 D(1)",
+        "Zajęcia świetlicowe",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Czyżewski",
+        "6",
+        "Wychowanie fizyczne",
+        "Hala3",
+        "R. Krzemiński",
+        "grupa klasy 2F udaje się pod opiekę Pana Krzemińskiego, grupa klasy 2A udaje się pod opiekę Pana Borowczyka"
+    ],
+    [
+        "D Czyżewski",
+        "7",
+        "Wychowanie fizyczne",
+        "Hala3",
+        "R. Borowczyk",
+        "grupa klasy 2F udaje się pod opiekę Pana Krzemińskiego, grupa klasy 2A udaje się pod opiekę Pana Borowczyka"
+    ],
+    [
+        "A Gałdecka-Wysk",
+        "0",
+        "2 H",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "A Gałdecka-Wysk",
+        "1",
+        "4 H",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "A Gałdecka-Wysk",
+        "2",
+        "3 H",
+        "220",
+        "A. Piłat",
+        "za nieobecny oddział - matematyka"
+    ],
+    [
+        "A Gałdecka-Wysk",
+        "3",
+        "3 D",
+        "220",
+        "I. Dziemitko",
+        "za nieobecny oddział, matematyka"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "4",
+        "2 H",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "5",
+        "2 H",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "K Grabska",
+        "1",
+        "3 D",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "K Grabska",
+        "2",
+        "1 D",
+        "Zajęcia świetlicowe",
+        "brak",
+        "grupa 1/2 - świetlica, pozostali przychodzą na 3 h lek."
+    ],
+    [
+        "K Grabska",
+        "3",
+        "1 A",
+        "107",
+        "A. Piłat",
+        "za nieobecny oddział, matematyka"
+    ],
+    [
+        "K Grabska",
+        "6",
+        "4 I",
+        "221",
+        "A. Sieracki",
+        "grupa 1/2 zajęcia z Panem Sierackim w sali 221, grupa 2/2 zajęcia z Panem Bzdawką w sali PC1"
+    ],
+    [
+        "K Grabska",
+        "7",
+        "1 H",
+        "106",
+        "K. Kosecka",
+        "za nieobecny oddział - j.niemiecki"
+    ],
+    [
+        "K Grabska",
+        "8",
+        "2 I",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "T Janka",
+        "2",
+        "2 J(1)",
+        "303",
+        "M. Chełmińska",
+        "za nieobecny oddział - j.niemiecki"
+    ],
+    [
+        "T Janka",
+        "4",
+        "3 H",
+        "214",
+        "G. Piekarz",
+        "za nieobecny oddział - wit. i ap. int."
+    ],
+    [
+        "T Janka",
+        "5",
+        "4 I(1)",
+        "110",
+        "I. Kowalska",
+        "złączenie grup - j.niemiecki"
+    ],
+    [
+        "T Janka",
+        "6",
+        "3 F(2)",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "T Janka",
+        "7",
+        "3 H(2)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "T Janka",
+        "8",
+        "2 F(2)",
+        "111",
+        "W. Korput",
+        "złączenie grup - j.angielski"
+    ],
+    [
+        "R Korytek",
+        "6",
+        "2 J(1)",
+        "318",
+        "T. Ciżmowski",
+        "brak"
+    ],
+    [
+        "R Korytek",
+        "7",
+        "2 J(1)",
+        "318",
+        "T. Ciżmowski",
+        "brak"
+    ],
+    [
+        "R Korytek",
+        "8",
+        "3 D(1)",
+        "318",
+        "T. Ciżmowski",
+        "brak"
+    ],
+    [
+        "R Korytek",
+        "9",
+        "3 D(1)",
+        "318",
+        "T. Ciżmowski",
+        "brak"
+    ],
+    [
+        "R Korytek",
+        "10",
+        "3 D(1)",
+        "318",
+        "T. Ciżmowski",
+        "brak"
+    ],
+    [
+        "P Leda",
+        "4",
+        "1 A",
+        "216",
+        "A. Kawula",
+        "za nieobecny oddział - informatyka"
+    ],
+    [
+        "P Leda",
+        "5",
+        "1 A",
+        "216",
+        "D. Bartkowska",
+        "za nieobecny oddział - matematyka"
+    ],
+    [
+        "P Leda",
+        "6",
+        "1 A",
+        "216",
+        "A. Grajek",
+        "za nieobecny oddział - biologia"
+    ],
+    [
+        "A Nowak",
+        "0",
+        "2 J",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "A Nowak",
+        "1",
+        "2 F",
+        "106",
+        "M. Kucharska",
+        "za nieobecny oddział - matematyka"
+    ],
+    [
+        "A Nowak",
+        "3",
+        "1 F",
+        "106",
+        "T. Poćwiardowski",
+        "za nieobecny oddział"
+    ],
+    [
+        "A Nowak",
+        "5",
+        "2 E",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "S Sidor",
+        "0",
+        "4 I(2)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "S Sidor",
+        "1",
+        "4 I(2)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "S Sidor",
+        "2",
+        "4 I(1)",
+        "5",
+        "A. Leszczyńska",
+        "j.angielski z 1 h lek."
+    ],
+    [
+        "S Sidor",
+        "3",
+        "4 I(1)",
+        "110",
+        "E. Pieńkosz-Kumor",
+        "złączenie grup, j.angielski"
+    ],
+    [
+        "S Sidor",
+        "4",
+        "1 H",
+        "Zajęcia świetlicowe",
+        "brak",
+        "brak"
+    ],
+    [
+        "S Sidor",
+        "5",
+        "3 B(1)",
+        "pc2",
+        "J. Torzecka",
+        "za nieobecny oddział - informatyka"
+    ],
+    [
+        "S Sidor",
+        "6",
+        "3 B(2)",
+        "205",
+        "K. Kosecka",
+        "za nieobecny oddział - j.niemiecki"
+    ],
+    [
+        "I Vacat",
+        "6",
+        "2 E(2)",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "I Vacat",
+        "1",
+        "2 H",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "I Vacat",
+        "2",
+        "2 F",
+        "218",
+        "A. Sieracki",
+        "brak"
+    ],
+    [
+        "I Vacat",
+        "3",
+        "2 F",
+        "218",
+        "A. Sieracki",
+        "brak"
+    ],
+    [
+        "I Vacat",
+        "7",
+        "2 I",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "I Vacat",
+        "8",
+        "2 J",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ]
+]
