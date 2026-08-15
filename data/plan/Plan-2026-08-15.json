@@ -1,0 +1,352 @@
+[
+    [
+        "0",
+        "Poniedziałek",
+        "wit.i ap.int",
+        "G Piekarz",
+        "214"
+    ],
+    [
+        "0",
+        "Wtorek",
+        "Pr.Ap.In.-2/2",
+        "M Bzdawka",
+        "pc4"
+    ],
+    [
+        "0",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "0",
+        "Czwartek",
+        "Pr.Ap.In.-2/2",
+        "M Bzdawka",
+        "221"
+    ],
+    [
+        "0",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "1",
+        "Poniedziałek",
+        "wit.i ap.int",
+        "G Piekarz",
+        "214"
+    ],
+    [
+        "1",
+        "Wtorek",
+        "Pr.Ap.In.-2/2",
+        "M Bzdawka",
+        "pc4"
+    ],
+    [
+        "1",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "1",
+        "Czwartek",
+        "Pr.Ap.In.-2/2",
+        "M Bzdawka",
+        "221"
+    ],
+    [
+        "1",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "2",
+        "Poniedziałek",
+        "r_informat.-2/2",
+        "M Kantorska",
+        "pc4"
+    ],
+    [
+        "2",
+        "Wtorek",
+        "wit.i ap.int",
+        "G Piekarz",
+        "218"
+    ],
+    [
+        "2",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "2",
+        "Czwartek",
+        "j.niemiecki-2/2",
+        "T Janka",
+        "303"
+    ],
+    [
+        "2",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "3",
+        "Poniedziałek",
+        "r_informat.-2/2",
+        "M Kantorska",
+        "pc4"
+    ],
+    [
+        "3",
+        "Wtorek",
+        "t.p.",
+        "t.Vacat tech",
+        "309"
+    ],
+    [
+        "3",
+        "Środa",
+        "wf",
+        "R Krzemiński",
+        "Hala1"
+    ],
+    [
+        "3",
+        "Czwartek",
+        "j.angielski-2/2",
+        "W Korput",
+        "301"
+    ],
+    [
+        "3",
+        "Piątek",
+        "matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "4",
+        "Poniedziałek",
+        "ABD-2/2",
+        "M Cierzniakowska",
+        "pc5"
+    ],
+    [
+        "4",
+        "Wtorek",
+        "matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "4",
+        "Środa",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "109"
+    ],
+    [
+        "4",
+        "Czwartek",
+        "zaj.z wych.",
+        "T Janka",
+        "214"
+    ],
+    [
+        "4",
+        "Piątek",
+        "geografia",
+        "A Gałdecka-Wysk",
+        "220"
+    ],
+    [
+        "5",
+        "Poniedziałek",
+        "ABD-2/2",
+        "M Cierzniakowska",
+        "pc5"
+    ],
+    [
+        "5",
+        "Wtorek",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "108"
+    ],
+    [
+        "5",
+        "Środa",
+        "matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "5",
+        "Czwartek",
+        "t.p.",
+        "t.Vacat tech",
+        "218"
+    ],
+    [
+        "5",
+        "Piątek",
+        "j.angielski-2/2",
+        "W Korput",
+        "301"
+    ],
+    [
+        "6",
+        "Poniedziałek",
+        "sys.baz.dan.",
+        "M Cierzniakowska",
+        "216"
+    ],
+    [
+        "6",
+        "Wtorek",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "108"
+    ],
+    [
+        "6",
+        "Środa",
+        "r_matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "6",
+        "Czwartek",
+        "geografia",
+        "A Gałdecka-Wysk",
+        "220"
+    ],
+    [
+        "6",
+        "Piątek",
+        "wf",
+        "R Krzemiński",
+        "Hala3"
+    ],
+    [
+        "7",
+        "Poniedziałek",
+        "sys.baz.dan.",
+        "M Cierzniakowska",
+        "216"
+    ],
+    [
+        "7",
+        "Wtorek",
+        "historia",
+        "M Zelek",
+        "107"
+    ],
+    [
+        "7",
+        "Środa",
+        "j.angielski-2/2",
+        "W Korput",
+        "301"
+    ],
+    [
+        "7",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "7",
+        "Piątek",
+        "wf",
+        "R Krzemiński",
+        "Hala1"
+    ],
+    [
+        "8",
+        "Poniedziałek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "8",
+        "Wtorek",
+        "fizyka",
+        "K Kołodziejski",
+        "211"
+    ],
+    [
+        "8",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "8",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "8",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "9",
+        "Poniedziałek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "9",
+        "Wtorek",
+        "fizyka",
+        "K Kołodziejski",
+        "211"
+    ],
+    [
+        "9",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "9",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "9",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ]
+]
