@@ -1,0 +1,394 @@
+[
+    [
+        "D Czyżewski",
+        "3",
+        "2 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Czyżewski",
+        "4",
+        "2 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Czyżewski",
+        "5",
+        "2 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "I Dziemitko",
+        "2",
+        "5 D",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "I Dziemitko",
+        "3",
+        "5 D",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "I Dziemitko",
+        "4",
+        "5 B",
+        "105",
+        "A. Sumicka",
+        "brak"
+    ],
+    [
+        "I Dziemitko",
+        "5",
+        "5 B",
+        "105",
+        "A. Sumicka",
+        "brak"
+    ],
+    [
+        "I Dziemitko",
+        "6",
+        "5 B",
+        "105",
+        "T. Janka",
+        "za nieobecny oddział"
+    ],
+    [
+        "V EduZdr.",
+        "2",
+        "1 I(1)",
+        "108",
+        "D. Musierowicz",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "0",
+        "2 B",
+        "109",
+        "D. Wróblewska",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "1",
+        "2 B",
+        "109",
+        "D. Wróblewska",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "6",
+        "5 H",
+        "108",
+        "A. Dembczyńska",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "7",
+        "5 D",
+        "309",
+        "D. Wróblewska",
+        "Oddział na 6 i 7 h lek. udaje się do sali 309"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "8",
+        "1 A",
+        "108",
+        "A. Dembczyńska",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "9",
+        "1 A",
+        "108",
+        "A. Dembczyńska",
+        "brak"
+    ],
+    [
+        "K Kołodziejski",
+        "1",
+        "5 D",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "P Leda",
+        "0",
+        "4 A(1)",
+        "Złączenie grup",
+        "brak",
+        "Złączenie grup; cały oddział przychodzi na 7.05 do sali 315"
+    ],
+    [
+        "P Leda",
+        "1",
+        "4 A(1)",
+        "Złączenie grup",
+        "brak",
+        "Złączenie grup; cały oddział przychodzi na 7.05 do sali 315"
+    ],
+    [
+        "P Leda",
+        "2",
+        "4 A(1)",
+        "Złączenie grup",
+        "brak",
+        "Złączenie grup; cały oddział przychodzi na 7.05 do sali 315"
+    ],
+    [
+        "P Leda",
+        "3",
+        "1 B",
+        "214",
+        "A. Gałdecka-Wysk",
+        "za nieobecny oddział; bizn.i zarz."
+    ],
+    [
+        "P Leda",
+        "4",
+        "1 B",
+        "Zajęcia Świetlicowe",
+        "brak",
+        "Oddział udaje się do świetlicy."
+    ],
+    [
+        "P Leda",
+        "5",
+        "2 A(3)",
+        "Złączenie grup",
+        "brak",
+        "Złączenie grup; cały oddział przychodzi na 7.05 do sali 316"
+    ],
+    [
+        "P Leda",
+        "6",
+        "2 A(3)",
+        "Złączenie grup",
+        "brak",
+        "Złączenie grup; cały oddział przychodzi na 7.05 do sali 316"
+    ],
+    [
+        "P Leda",
+        "7",
+        "2 A(3)",
+        "Złączenie grup",
+        "brak",
+        "Złączenie grup; cały oddział przychodzi na 7.05 do sali 316"
+    ],
+    [
+        "P Leda",
+        "8",
+        "2 A(3)",
+        "Złączenie grup",
+        "brak",
+        "Złączenie grup; cały oddział przychodzi na 7.05 do sali 316"
+    ],
+    [
+        "A Nowak",
+        "7",
+        "5 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "A Nowak",
+        "8",
+        "5 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "A Nowak",
+        "9",
+        "5 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "T Poćwiardowski",
+        "6",
+        "1 H(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "T Poćwiardowski",
+        "7",
+        "2 I(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "T Poćwiardowski",
+        "8",
+        "2 H(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "T Poćwiardowski",
+        "9",
+        "2 B(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "K Smoleń",
+        "1",
+        "1 I",
+        "Uczniowie przychodzą później",
+        "brak",
+        "Osoby niepoinformowane udają się do świetlicy szkolnej"
+    ],
+    [
+        "K Smoleń",
+        "2",
+        "4 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "K Smoleń",
+        "4",
+        "4 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "K Smoleń",
+        "5",
+        "4 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "K Smoleń",
+        "6",
+        "4 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "P Stachura",
+        "3",
+        "1 F",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "P Stachura",
+        "4",
+        "1 F",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "P Stachura",
+        "5",
+        "1 F",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "P Stachura",
+        "6",
+        "1 F",
+        "Uczniowie przychodzą później",
+        "brak",
+        "Oddział przychodzi na 13.40 (7 h lek.)"
+    ],
+    [
+        "M Tomczak",
+        "1",
+        "3 H(1)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Tomczak",
+        "2",
+        "3 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Tomczak",
+        "3",
+        "3 F(1)",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Tomczak",
+        "4",
+        "3 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Tomczak",
+        "5",
+        "3 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Tomczak",
+        "6",
+        "3 F",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "t Vacat",
+        "0",
+        "5 I(1)",
+        "pc5",
+        "M. Bzdawka",
+        "brak"
+    ],
+    [
+        "t Vacat",
+        "1",
+        "5 I(1)",
+        "pc5",
+        "M. Bzdawka",
+        "brak"
+    ]
+]

@@ -9,8 +9,7 @@ nazwa = folder / 'data' / 'zastepstwa' / f"Zastepstwa-{date.today()}.json"
 nazwa2 = folder / 'data' / 'zastepstwa' / "pomoc.txt"
 nazwa.parent.mkdir(parents=True, exist_ok=True)
 
-# url = 'https://zastepstwa.zse.bydgoszcz.pl/'
-url = 'https://web.archive.org/web/20250522061655/https://zastepstwa.zse.bydgoszcz.pl/'
+url = 'https://zastepstwa.zse.bydgoszcz.pl/'
 
 strona = requests.get(url, timeout=30)
 strona.raise_for_status()

@@ -4,7 +4,7 @@ import json
 from datetime import date
 from pathlib import Path
 
-url = 'https://plan.zse.bydgoszcz.pl/plany/o23.html'
+url = 'https://plan.zse.bydgoszcz.pl/plany/o29.html'
 response = requests.get(url, timeout=30)
 response.raise_for_status()
 response.encoding = 'utf-8'
@@ -88,6 +88,7 @@ nauczyciele = {
     "St": "P Stachura",
     "Pm": "M Staśkiewicz",
     "Sh": "A Szlachciak",
+    "RŚ": "R Śmidoda",
     "Ta": "K Tabor",
     "To": "M Tomczak",
     "Tj": "J Torzecka",

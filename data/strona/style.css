@@ -13,3 +13,12 @@ td {
 th {
     background-color: brown;
 }
+.lekcja.dzisiaj {
+    background-color: yellow;
+    color: black;
+}
+
+.lekcja.aktualna {
+    background-color: red !important;
+    color: white !important;
+}
