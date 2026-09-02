@@ -89,6 +89,6 @@ if len(tr)>4:
         dzienTygodnia.write(dzien_tygodnia)
 else:
     zastepstwa=''
-    with open(nazwa, 'w', encoding='utf-8') as plik, open(nazwa2, 'w') as dzienTygodnia:
-            plik.write(json.dumps(zastepstwa, ensure_ascii=False, indent=4))
-            dzienTygodnia.write(dzien_tygodnia)
+    # with open(nazwa, 'w', encoding='utf-8') as plik, open(nazwa2, 'w') as dzienTygodnia:
+    #         plik.write(json.dumps(zastepstwa, ensure_ascii=False, indent=4))
+    #         dzienTygodnia.write(dzien_tygodnia)

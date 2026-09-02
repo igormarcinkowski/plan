@@ -1,5 +1,5 @@
 from pathlib import Path
-from datetime import date
+from datetime import date, datetime
 import json
 
 folder = Path(__file__).parent
@@ -8,48 +8,39 @@ dzisiaj = date.today()
 rok = dzisiaj.year
 pierwszy_dzien = date(rok, 8, 31)
 tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
-nazwaFolderu = 'tydzien_'+str(tydzien)
 
-nazwaPlan = 'plan.json'
-nazwaZastepstwa = 'zastepstwa-' + str(date.today()) + '.json'
+nazwaFolderu = 'tydzien_' + str(tydzien)
+folderNazwa = folder / 'data' / nazwaFolderu
 
-sciezkaPlan = folder / 'data' / nazwaFolderu / nazwaPlan
-sciezkaZastepstwa = folder / 'data' / nazwaFolderu / nazwaZastepstwa
-dzienTygodnia = folder / 'data' / 'pomoc.txt'
+sciezkaPlan = folderNazwa / 'plan.json'
 
-with open(sciezkaPlan, 'r', encoding='utf-8') as plan, \
-     open(sciezkaZastepstwa, 'r', encoding='utf-8') as zastepstwa, \
-     open(dzienTygodnia, 'r', encoding='utf-8') as PlikdzienTygodnia:
-
+with open(sciezkaPlan, 'r', encoding='utf-8') as plan:
     danePlan = json.load(plan)
-    daneZastepstwa = json.load(zastepstwa)
 
-    for wiersz in PlikdzienTygodnia:
-        dzienTygodnia = int(wiersz)
+dniTygodnia = [
+    'Poniedziałek',
+    'Wtorek',
+    'Środa',
+    'Czwartek',
+    'Piątek'
+]
 
-    zmiany = []
-
-    for i in range(len(daneZastepstwa)):
-        if daneZastepstwa[i][2] in ['5 H', '5 H(2)']:
-            zmiany.append(daneZastepstwa[i])
-
-    dniTygodnia = [
-        'Poniedziałek',
-        'Wtorek',
-        'Środa',
-        'Czwartek',
-        'Piątek'
-    ]
-
+for plik in folderNazwa.glob("zastepstwa-*.json"):
+    dzienn = plik.name.removeprefix("zastepstwa-").removesuffix(".json")
+    dzienTygodnia = datetime.strptime(dzienn, "%Y-%m-%d").weekday()+1
     dzienTygodniaNazwa = dniTygodnia[dzienTygodnia]
 
-    for i in danePlan:
-        for j in zmiany:
-            if i[1] == dzienTygodniaNazwa and i[0] == j[1]:
-                if j[5] != 'brak':
-                    i[2] = j[5]
-                i[3] = j[4]
-                i[4] = j[3]
+    with open(plik, 'r', encoding='utf-8') as zastepstwa:
+        daneZastepstwa = json.load(zastepstwa)
+
+    for j in daneZastepstwa:
+        if j[2] in ['5 H', '5 H(2)']:
+            for i in danePlan:
+                if i[1] == dzienTygodniaNazwa and i[0] == j[1]:
+                    if j[5] != 'brak':
+                        i[2] = j[5]
+                    i[3] = j[4]
+                    i[4] = j[3]
 
 nazwa = folder / "data" / "strona" / "index.html"
 nazwa.parent.mkdir(parents=True, exist_ok=True)
@@ -69,12 +60,14 @@ godziny = {
     11: ("17:30", "18:15")
 }
 
-with open(nazwa, 'w', encoding='utf-8') as plik:
+max_lekcja = max(int(i[0]) for i in danePlan)
+
+with open(nazwa, 'w', encoding='UTF-8') as plik:
     html = """<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Plan 4H</title>
+    <title>Plan 5H</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -127,7 +120,7 @@ with open(nazwa, 'w', encoding='utf-8') as plik:
             licznik2 += 1
             html += '</tr>'
 
-            if licznik2 <= int(danePlan[-1][0]):
+            if licznik2 <= max_lekcja:
                 html += (
                     '<tr>'
                     f'<td>{licznik2}</td>'

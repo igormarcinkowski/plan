@@ -1,24 +1,328 @@
-body {
-    padding-top: 50px;
-    justify-items: center;
-}
-table {
-    border: 5px solid black;
-}
-td {
-    padding: 5px;
-    border: 2px solid black;
-    background-color: beige;
-}
-th {
-    background-color: brown;
-}
-.lekcja.dzisiaj {
-    background-color: yellow;
-    color: black;
+
+
+* {
+    box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #dfe7f1);
+    color: #1f2937;
+}
+
+
+/* ===== KONTENER TABELI ===== */
+
+body {
+    overflow-x: auto;
+}
+
+
+/* ===== TABELA ===== */
+
+table {
+    width: 100%;
+    max-width: 1250px;
+    min-width: 850px;
+
+    margin: 0 auto;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    border: 3px solid #263238;
+    border-radius: 14px;
+
+    background: white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* ===== NAGŁÓWKI ===== */
+
+th {
+    padding: 14px 10px;
+
+    background: linear-gradient(135deg, #37474f, #455a64);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid #263238;
+
+    white-space: nowrap;
+}
+
+th:last-child {
+    border-right: none;
+}
+
+
+/* ===== KOMÓRKI ===== */
+
+td {
+    padding: 9px 8px;
+
+    background-color: #f8fafc;
+
+    border-right: 1px solid #cbd5e1;
+    border-bottom: 1px solid #cbd5e1;
+
+    text-align: center;
+    vertical-align: middle;
+
+    transition: 0.2s ease;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ===== NUMER LEKCJI ===== */
+
+td:first-child {
+    width: 55px;
+    min-width: 55px;
+
+    background-color: #e2e8f0;
+
+    color: #334155;
+    font-weight: 700;
+}
+
+
+/* ===== GODZINY ===== */
+
+td:nth-child(2) {
+    width: 140px;
+    min-width: 140px;
+
+    background-color: #e2e8f0;
+
+    color: #475569;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* ===== LEKCJE ===== */
+
+.lekcja {
+    width: 145px;
+    min-width: 145px;
+
+    font-size: 13px;
+    line-height: 1.45;
+
+    background-color: #f8fafc;
+    color: #1e293b;
+
+    cursor: default;
+}
+
+.lekcja:hover {
+    background-color: #e0f2fe;
+
+    box-shadow:
+        inset 0 0 0 2px #7dd3fc;
+}
+
+
+/* ===== DZISIAJ ===== */
+
+.lekcja.dzisiaj {
+    background-color: #fef3c7;
+
+    color: #92400e;
+
+    box-shadow:
+        inset 0 0 0 2px #f59e0b;
+}
+
+.lekcja.dzisiaj:hover {
+    background-color: #fde68a;
+}
+
+
+/* ===== AKTUALNA ===== */
+
 .lekcja.aktualna {
-    background-color: red !important;
+    background: linear-gradient(
+        135deg,
+        #dc2626,
+        #ef4444
+    ) !important;
+
     color: white !important;
+
+    font-weight: 700;
+
+    box-shadow:
+        inset 0 0 0 2px #991b1b,
+        0 0 12px rgba(239, 68, 68, 0.45);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 25px 10px;
+    }
+
+    table {
+        min-width: 800px;
+    }
+
+    th {
+        padding: 11px 7px;
+        font-size: 13px;
+    }
+
+    td {
+        padding: 7px 6px;
+    }
+
+    .lekcja {
+        min-width: 125px;
+        width: 125px;
+
+        font-size: 12px;
+    }
+
+    td:nth-child(2) {
+        min-width: 125px;
+        width: 125px;
+    }
+}
+
+
+/* =========================================
+   TELEFON
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 5px;
+    }
+
+    table {
+        /*
+         * Tabela jest szersza od telefonu,
+         * ale pozostaje czytelna.
+         * Można ją przesuwać palcem.
+         */
+        min-width: 700px;
+
+        margin: 0;
+
+        border-width: 2px;
+        border-radius: 10px;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.12);
+    }
+
+    th {
+        padding: 10px 6px;
+
+        font-size: 11px;
+    }
+
+    td {
+        padding: 6px 5px;
+
+        font-size: 11px;
+    }
+
+    td:first-child {
+        width: 40px;
+        min-width: 40px;
+    }
+
+    td:nth-child(2) {
+        width: 105px;
+        min-width: 105px;
+
+        font-size: 10px;
+    }
+
+    .lekcja {
+        width: 110px;
+        min-width: 110px;
+
+        font-size: 10px;
+        line-height: 1.35;
+    }
+}
+
+
+/* =========================================
+   BARDZO MAŁE TELEFONY
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 10px 3px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    th {
+        padding: 8px 5px;
+        font-size: 10px;
+    }
+
+    td {
+        padding: 5px 4px;
+    }
+
+    td:first-child {
+        width: 35px;
+        min-width: 35px;
+    }
+
+    td:nth-child(2) {
+        width: 95px;
+        min-width: 95px;
+
+        font-size: 9px;
+    }
+
+    .lekcja {
+        width: 105px;
+        min-width: 105px;
+
+        font-size: 9px;
+    }
 }

@@ -9,8 +9,8 @@
     [
         "0",
         "Wtorek",
-        "Pr.Ap.In.-2/2",
-        "M Bzdawka",
+        "Pr.Ap.In.",
+        "M. Bzdawka",
         "pc5"
     ],
     [
@@ -23,29 +23,29 @@
     [
         "0",
         "Czwartek",
-        "j.niemiecki-2/2",
-        "T Janka",
+        "j.niemiecki",
+        "T. Janka",
         "303"
     ],
     [
         "0",
         "Piątek",
         "dor.zaw.",
-        "A Gałdecka-Wysk",
+        "A. Gałdecka-Wysk",
         "220"
     ],
     [
         "1",
         "Poniedziałek",
         "r_matematyka",
-        "M Kucharska",
+        "M. Kucharska",
         "111"
     ],
     [
         "1",
         "Wtorek",
-        "Pr.Ap.In.-2/2",
-        "M Bzdawka",
+        "Pr.Ap.In.",
+        "M. Bzdawka",
         "pc5"
     ],
     [
@@ -59,28 +59,28 @@
         "1",
         "Czwartek",
         "matematyka",
-        "M Kucharska",
+        "M. Kucharska",
         "111"
     ],
     [
         "1",
         "Piątek",
         "dor.zaw.",
-        "A Gałdecka-Wysk",
+        "A. Gałdecka-Wysk",
         "220"
     ],
     [
         "2",
         "Poniedziałek",
         "r_matematyka",
-        "M Kucharska",
+        "M. Kucharska",
         "111"
     ],
     [
         "2",
         "Wtorek",
         "historia",
-        "M Zelek",
+        "M. Zelek",
         "106"
     ],
     [
@@ -94,140 +94,140 @@
         "2",
         "Czwartek",
         "j.polski",
-        "D Gierczak-Pliszka",
+        "D. Gierczak-Pliszka",
         "108"
     ],
     [
         "2",
         "Piątek",
-        "r_informat.-2/2",
-        "M Kantorska",
+        "r_informat.",
+        "M. Kantorska",
         "pc4"
     ],
     [
         "3",
         "Poniedziałek",
-        "ABD-2/2",
-        "M Cierzniakowska",
+        "ABD",
+        "M. Cierzniakowska",
         "pc2"
     ],
     [
         "3",
         "Wtorek",
         "matematyka",
-        "M Kucharska",
+        "M. Kucharska",
         "111"
     ],
     [
         "3",
         "Środa",
         "matematyka",
-        "M Kucharska",
+        "M. Kucharska",
         "111"
     ],
     [
         "3",
         "Czwartek",
         "j.polski",
-        "D Gierczak-Pliszka",
+        "D. Gierczak-Pliszka",
         "108"
     ],
     [
         "3",
         "Piątek",
-        "r_informat.-2/2",
-        "M Kantorska",
+        "r_informat.",
+        "M. Kantorska",
         "pc4"
     ],
     [
         "4",
         "Poniedziałek",
-        "ABD-2/2",
-        "M Cierzniakowska",
+        "ABD",
+        "M. Cierzniakowska",
         "pc2"
     ],
     [
         "4",
         "Wtorek",
         "j.polski",
-        "D Gierczak-Pliszka",
+        "D. Gierczak-Pliszka",
         "108"
     ],
     [
         "4",
         "Środa",
         "matematyka",
-        "M Kucharska",
+        "M. Kucharska",
         "111"
     ],
     [
         "4",
         "Czwartek",
-        "brak",
-        "brak",
-        "brak"
+        "wf",
+        "R. Krzemiński",
+        "Hala2"
     ],
     [
         "4",
         "Piątek",
         "wit.i ap.int",
-        "R Śmidoda",
+        "R. Śmidoda",
         "216"
     ],
     [
         "5",
         "Poniedziałek",
         "wit.i ap.int",
-        "R Śmidoda",
+        "R. Śmidoda",
         "214"
     ],
     [
         "5",
         "Wtorek",
         "j.polski",
-        "D Gierczak-Pliszka",
+        "D. Gierczak-Pliszka",
         "108"
     ],
     [
         "5",
         "Środa",
         "historia",
-        "M Zelek",
+        "M. Zelek",
         "106"
     ],
     [
         "5",
         "Czwartek",
-        "brak",
-        "brak",
-        "brak"
+        "wf",
+        "R. Krzemiński",
+        "Hala2"
     ],
     [
         "5",
         "Piątek",
         "wf",
-        "R Krzemiński",
+        "R. Krzemiński",
         "Hala3"
     ],
     [
         "6",
         "Poniedziałek",
         "zaj.z wych.",
-        "T Janka",
+        "T. Janka",
         "202"
     ],
     [
         "6",
         "Wtorek",
         "z_angielski",
-        "M Czeszewska",
+        "M. Czeszewska",
         "106"
     ],
     [
         "6",
         "Środa",
         "j.polski",
-        "D Gierczak-Pliszka",
+        "D. Gierczak-Pliszka",
         "108"
     ],
     [
@@ -247,15 +247,15 @@
     [
         "7",
         "Poniedziałek",
-        "j.angielski-2/2",
-        "W Korput",
+        "j.angielski",
+        "W. Korput",
         "301"
     ],
     [
         "7",
         "Wtorek",
-        "j.angielski-2/2",
-        "W Korput",
+        "j.angielski",
+        "W. Korput",
         "301"
     ],
     [
@@ -289,8 +289,8 @@
     [
         "8",
         "Wtorek",
-        "j.angielski-2/2",
-        "W Korput",
+        "j.angielski",
+        "W. Korput",
         "301"
     ],
     [
