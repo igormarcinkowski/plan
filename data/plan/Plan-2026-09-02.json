@@ -1,0 +1,317 @@
+[
+    [
+        "0",
+        "Poniedziałek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "0",
+        "Wtorek",
+        "Pr.Ap.In.-2/2",
+        "M Bzdawka",
+        "pc5"
+    ],
+    [
+        "0",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "0",
+        "Czwartek",
+        "j.niemiecki-2/2",
+        "T Janka",
+        "303"
+    ],
+    [
+        "0",
+        "Piątek",
+        "dor.zaw.",
+        "A Gałdecka-Wysk",
+        "220"
+    ],
+    [
+        "1",
+        "Poniedziałek",
+        "r_matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "1",
+        "Wtorek",
+        "Pr.Ap.In.-2/2",
+        "M Bzdawka",
+        "pc5"
+    ],
+    [
+        "1",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "1",
+        "Czwartek",
+        "matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "1",
+        "Piątek",
+        "dor.zaw.",
+        "A Gałdecka-Wysk",
+        "220"
+    ],
+    [
+        "2",
+        "Poniedziałek",
+        "r_matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "2",
+        "Wtorek",
+        "historia",
+        "M Zelek",
+        "106"
+    ],
+    [
+        "2",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "2",
+        "Czwartek",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "108"
+    ],
+    [
+        "2",
+        "Piątek",
+        "r_informat.-2/2",
+        "M Kantorska",
+        "pc4"
+    ],
+    [
+        "3",
+        "Poniedziałek",
+        "ABD-2/2",
+        "M Cierzniakowska",
+        "pc2"
+    ],
+    [
+        "3",
+        "Wtorek",
+        "matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "3",
+        "Środa",
+        "matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "3",
+        "Czwartek",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "108"
+    ],
+    [
+        "3",
+        "Piątek",
+        "r_informat.-2/2",
+        "M Kantorska",
+        "pc4"
+    ],
+    [
+        "4",
+        "Poniedziałek",
+        "ABD-2/2",
+        "M Cierzniakowska",
+        "pc2"
+    ],
+    [
+        "4",
+        "Wtorek",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "108"
+    ],
+    [
+        "4",
+        "Środa",
+        "matematyka",
+        "M Kucharska",
+        "111"
+    ],
+    [
+        "4",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "4",
+        "Piątek",
+        "wit.i ap.int",
+        "R Śmidoda",
+        "216"
+    ],
+    [
+        "5",
+        "Poniedziałek",
+        "wit.i ap.int",
+        "R Śmidoda",
+        "214"
+    ],
+    [
+        "5",
+        "Wtorek",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "108"
+    ],
+    [
+        "5",
+        "Środa",
+        "historia",
+        "M Zelek",
+        "106"
+    ],
+    [
+        "5",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "5",
+        "Piątek",
+        "wf",
+        "R Krzemiński",
+        "Hala3"
+    ],
+    [
+        "6",
+        "Poniedziałek",
+        "zaj.z wych.",
+        "T Janka",
+        "202"
+    ],
+    [
+        "6",
+        "Wtorek",
+        "z_angielski",
+        "M Czeszewska",
+        "106"
+    ],
+    [
+        "6",
+        "Środa",
+        "j.polski",
+        "D Gierczak-Pliszka",
+        "108"
+    ],
+    [
+        "6",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "6",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "7",
+        "Poniedziałek",
+        "j.angielski-2/2",
+        "W Korput",
+        "301"
+    ],
+    [
+        "7",
+        "Wtorek",
+        "j.angielski-2/2",
+        "W Korput",
+        "301"
+    ],
+    [
+        "7",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "7",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "7",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "8",
+        "Poniedziałek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "8",
+        "Wtorek",
+        "j.angielski-2/2",
+        "W Korput",
+        "301"
+    ],
+    [
+        "8",
+        "Środa",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "8",
+        "Czwartek",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "8",
+        "Piątek",
+        "brak",
+        "brak",
+        "brak"
+    ]
+]
