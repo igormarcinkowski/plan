@@ -25,10 +25,21 @@ dniTygodnia = [
     'Piątek'
 ]
 
+zmiany = set()
+
 for plik in folderNazwa.glob("zastepstwa-*.json"):
-    dzienn = plik.name.removeprefix("zastepstwa-").removesuffix(".json")
-    dzienTygodnia = datetime.strptime(dzienn, "%Y-%m-%d").weekday()+1
-    dzienTygodniaNazwa = dniTygodnia[dzienTygodnia]
+    dzienn = (
+        plik.name
+        .removeprefix("zastepstwa-")
+        .removesuffix(".json")
+    )
+
+    dzienTygodnia = datetime.strptime(
+        dzienn,
+        "%Y-%m-%d"
+    ).weekday() + 2
+
+    dzienTygodniaNazwa = dniTygodnia[dzienTygodnia - 1]
 
     with open(plik, 'r', encoding='utf-8') as zastepstwa:
         daneZastepstwa = json.load(zastepstwa)
@@ -36,11 +47,31 @@ for plik in folderNazwa.glob("zastepstwa-*.json"):
     for j in daneZastepstwa:
         if j[2] in ['5 H', '5 H(2)']:
             for i in danePlan:
-                if i[1] == dzienTygodniaNazwa and i[0] == j[1]:
+                if (
+                    i[1] == dzienTygodniaNazwa
+                    and i[0] == j[1]
+                ):
+                    zmiany.add(
+                        (
+                            dzienTygodniaNazwa,
+                            j[1]
+                        )
+                    )
+
                     if j[5] != 'brak':
                         i[2] = j[5]
+
                     i[3] = j[4]
                     i[4] = j[3]
+
+sciezkaAktualizacji = folder / "data" / "ostatnia_aktualizacja.txt"
+
+ostatniaAktualizacja = datetime.now()
+
+with open(sciezkaAktualizacji, 'w', encoding='utf-8') as plik:
+    plik.write(
+        ostatniaAktualizacja.strftime("%Y-%m-%d %H:%M")
+    )
 
 nazwa = folder / "data" / "strona" / "index.html"
 nazwa.parent.mkdir(parents=True, exist_ok=True)
@@ -62,15 +93,25 @@ godziny = {
 
 max_lekcja = max(int(i[0]) for i in danePlan)
 
+ostatniaAktualizacjaTekst = ostatniaAktualizacja.strftime(
+    "%d.%m.%Y, %H:%M"
+)
+
 with open(nazwa, 'w', encoding='UTF-8') as plik:
-    html = """<!DOCTYPE html>
+    html = f"""<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan 5H</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="aktualizacja">
+        Zaaktualizowano plan: {ostatniaAktualizacjaTekst}
+    </div>
+
     <table>
         <tbody>
             <tr>
@@ -103,8 +144,13 @@ with open(nazwa, 'w', encoding='UTF-8') as plik:
 
         start, end = godziny[numer_lekcji]
 
+        klasa = "lekcja"
+
+        if (dzien, danePlan[i][0]) in zmiany:
+            klasa += " zmiana"
+
         html += (
-            f'<td class="lekcja" '
+            f'<td class="{klasa}" '
             f'data-day="{dniTygodnia.index(dzien) + 1}" '
             f'data-start="{start}" '
             f'data-end="{end}">'
@@ -132,6 +178,24 @@ with open(nazwa, 'w', encoding='UTF-8') as plik:
     html += """</tr>
         </tbody>
     </table>
+
+    <div class="legenda">
+        <span class="legenda-item">
+            <span class="kolor dzisiaj-kolor"></span>
+            Dzisiejszy dzień
+        </span>
+
+        <span class="legenda-item">
+            <span class="kolor nastepna-kolor"></span>
+            Następna lekcja
+        </span>
+
+        <span class="legenda-item">
+            <span class="kolor aktualna-kolor"></span>
+            Aktualna lekcja
+        </span>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>

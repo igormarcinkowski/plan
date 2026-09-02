@@ -169,19 +169,18 @@ td:nth-child(2) {
 
 /* ===== AKTUALNA ===== */
 
+.lekcja.nastepna {
+    background-color: #bbf7d0;
+    color: #166534;
+    box-shadow: inset 0 0 0 2px #4ade80;
+}
+
 .lekcja.aktualna {
-    background: linear-gradient(
-        135deg,
-        #dc2626,
-        #ef4444
-    ) !important;
-
-    color: white !important;
-
-    font-weight: 700;
+    background: linear-gradient(135deg, #83dae6, #25d5ec) !important;
+    color: black !important;
 
     box-shadow:
-        inset 0 0 0 2px #991b1b,
+        inset 0 0 0 2px #12c7df,
         0 0 12px rgba(239, 68, 68, 0.45);
 }
 
@@ -306,7 +305,6 @@ td:nth-child(2) {
     td {
         padding: 5px 4px;
     }
-
     td:first-child {
         width: 35px;
         min-width: 35px;
@@ -325,4 +323,69 @@ td:nth-child(2) {
 
         font-size: 9px;
     }
+}
+.lekcja.zmiana {
+    font-weight: 700;
+    color: #ff0000;
+}
+.legenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kolor {
+    width: 18px;
+    height: 18px;
+
+    display: inline-block;
+
+    border-radius: 5px;
+}
+
+.dzisiaj-kolor {
+    background-color: #fef3c7;
+    border: 2px solid #f59e0b;
+}
+
+.nastepna-kolor {
+    background-color: #bbf7d0;
+    border: 2px solid #4ade80;
+}
+
+.aktualna-kolor {
+    background: linear-gradient(135deg, #83dae6, #25d5ec);
+    border: 2px solid #12c7df;
+}
+
+@media (max-width: 600px) {
+    .legenda {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .kolor {
+        width: 15px;
+        height: 15px;
+    }
+}
+.aktualizacja {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
 }
