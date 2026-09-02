@@ -4,9 +4,15 @@ import json
 from pathlib import Path
 from datetime import date
 
+dzisiaj = date.today()
+rok = dzisiaj.year
+pierwszy_dzien = date(rok, 8, 31)
+tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
+nazwaFolderu = 'tydzien_'+str(tydzien)
+
 folder = Path(__file__).parent
-nazwa = folder / 'data' / 'zastepstwa' / f"Zastepstwa-{date.today()}.json"
-nazwa2 = folder / 'data' / 'zastepstwa' / "pomoc.txt"
+nazwa = folder / 'data' / nazwaFolderu / f"zastepstwa-{date.today()}.json"
+nazwa2 = folder / 'data' / "pomoc.txt"
 nazwa.parent.mkdir(parents=True, exist_ok=True)
 
 url = 'https://zastepstwa.zse.bydgoszcz.pl/'

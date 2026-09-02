@@ -150,8 +150,14 @@ for wiersz in wiersze:
                 dane.pop(-1)
 
     licznik=0
+
+dzisiaj = date.today()
+rok = dzisiaj.year
+pierwszy_dzien = date(rok, 8, 31)
+tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
+nazwaFolderu = 'tydzien_'+str(tydzien)
 folder = Path(__file__).parent
-nazwa = folder / 'data' / 'plan' / f"Plan-{date.today()}.json"
+nazwa = folder / 'data' / nazwaFolderu / f"plan.json"
 nazwa.parent.mkdir(parents=True, exist_ok=True)
 with open(nazwa, 'w', encoding='utf-8') as plik:
     plik.write(json.dumps(dane, ensure_ascii=False, indent=4))

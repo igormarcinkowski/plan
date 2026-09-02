@@ -4,12 +4,18 @@ import json
 
 folder = Path(__file__).parent
 
-nazwaPlan = 'Plan-' + str(date.today()) + '.json'
-nazwaZastepstwa = 'Zastepstwa-' + str(date.today()) + '.json'
+dzisiaj = date.today()
+rok = dzisiaj.year
+pierwszy_dzien = date(rok, 8, 31)
+tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
+nazwaFolderu = 'tydzien_'+str(tydzien)
 
-sciezkaPlan = folder / 'data' / 'plan' / nazwaPlan
-sciezkaZastepstwa = folder / 'data' / 'zastepstwa' / nazwaZastepstwa
-dzienTygodnia = folder / 'data' / 'zastepstwa' / 'pomoc.txt'
+nazwaPlan = 'plan.json'
+nazwaZastepstwa = 'zastepstwa-' + str(date.today()) + '.json'
+
+sciezkaPlan = folder / 'data' / nazwaFolderu / nazwaPlan
+sciezkaZastepstwa = folder / 'data' / nazwaFolderu / nazwaZastepstwa
+dzienTygodnia = folder / 'data' / 'pomoc.txt'
 
 with open(sciezkaPlan, 'r', encoding='utf-8') as plan, \
      open(sciezkaZastepstwa, 'r', encoding='utf-8') as zastepstwa, \
