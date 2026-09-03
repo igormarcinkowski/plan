@@ -9,6 +9,11 @@ rok = dzisiaj.year
 pierwszy_dzien = date(rok, 8, 31)
 tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
 
+dyzurny1=tydzien
+if dyzurny1>17:
+    dyzurny1=-17
+dyzurny2=35-dyzurny1
+
 nazwaFolderu = 'tydzien_' + str(tydzien)
 folderNazwa = folder / 'data' / nazwaFolderu
 
@@ -37,9 +42,12 @@ for plik in folderNazwa.glob("zastepstwa-*.json"):
     dzienTygodnia = datetime.strptime(
         dzienn,
         "%Y-%m-%d"
-    ).weekday() + 2
+    ).weekday()
 
-    dzienTygodniaNazwa = dniTygodnia[dzienTygodnia - 1]
+    if dzienTygodnia >= 5:
+        continue
+
+    dzienTygodniaNazwa = dniTygodnia[dzienTygodnia]
 
     with open(plik, 'r', encoding='utf-8') as zastepstwa:
         daneZastepstwa = json.load(zastepstwa)
@@ -110,8 +118,10 @@ with open(nazwa, 'w', encoding='UTF-8') as plik:
 
     <div class="aktualizacja">
         Zaaktualizowano plan: {ostatniaAktualizacjaTekst}
+    </div> 
+    <div class="aktualizacja">
+        Numery dyżurnych: {dyzurny1, dyzurny2}
     </div>
-
     <table>
         <tbody>
             <tr>
@@ -149,16 +159,19 @@ with open(nazwa, 'w', encoding='UTF-8') as plik:
         if (dzien, danePlan[i][0]) in zmiany:
             klasa += " zmiana"
 
-        html += (
-            f'<td class="{klasa}" '
-            f'data-day="{dniTygodnia.index(dzien) + 1}" '
-            f'data-start="{start}" '
-            f'data-end="{end}">'
-            f'{danePlan[i][2]}<br>'
-            f'{danePlan[i][3]}<br>'
-            f'{danePlan[i][4]}'
-            f'</td>'
-        )
+        if danePlan[i][2] == '&nbsp;':
+            html += '<td class="pusta">&nbsp;</td>'
+        else:
+            html += (
+                f'<td class="{klasa}" '
+                f'data-day="{dniTygodnia.index(dzien) + 1}" '
+                f'data-start="{start}" '
+                f'data-end="{end}">'
+                f'{danePlan[i][2]}<br>'
+                f'{danePlan[i][3]}<br>'
+                f'{danePlan[i][4]}'
+                f'</td>'
+            )
 
         licznik += 1
 

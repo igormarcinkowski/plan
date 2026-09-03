@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from pathlib import Path
-from datetime import date
+from datetime import date, timedelta
 
 dzisiaj = date.today()
 rok = dzisiaj.year
@@ -11,9 +11,6 @@ tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
 nazwaFolderu = 'tydzien_'+str(tydzien)
 
 folder = Path(__file__).parent
-nazwa = folder / 'data' / nazwaFolderu / f"zastepstwa-{date.today()}.json"
-nazwa2 = folder / 'data' / "pomoc.txt"
-nazwa.parent.mkdir(parents=True, exist_ok=True)
 
 url = 'https://zastepstwa.zse.bydgoszcz.pl/'
 
@@ -35,9 +32,15 @@ if nobr:
         if dzien in pierwsza_linia.lower():
             dzien_tygodnia = str(dni.index(dzien))
             break
+if int(dzien_tygodnia)==date.today().weekday():
+    zmienna = date.today()
+else:
+    zmienna = date.today() + timedelta(days=1)
+nazwa = folder / 'data' / nazwaFolderu / f"zastepstwa-{zmienna}.json"
+nazwa.parent.mkdir(parents=True, exist_ok=True)
+
 if dzien_tygodnia is None:
     raise Exception("Nie udało się znaleźć dnia tygodnia na stronie zastępstw")
-
 if len(tr)>4:
     licznik=0
     for i in nauczyciele:
@@ -84,11 +87,7 @@ if len(tr)>4:
             zastepstwa.append(tymczasowe)
         tymczasowe=[]
 
-    with open(nazwa, 'w', encoding='utf-8') as plik, open(nazwa2, 'w') as dzienTygodnia:
+    with open(nazwa, 'w', encoding='utf-8') as plik:
         plik.write(json.dumps(zastepstwa, ensure_ascii=False, indent=4))
-        dzienTygodnia.write(dzien_tygodnia)
 else:
     zastepstwa=''
-    # with open(nazwa, 'w', encoding='utf-8') as plik, open(nazwa2, 'w') as dzienTygodnia:
-    #         plik.write(json.dumps(zastepstwa, ensure_ascii=False, indent=4))
-    #         dzienTygodnia.write(dzien_tygodnia)

@@ -325,8 +325,8 @@ td:nth-child(2) {
     }
 }
 .lekcja.zmiana {
-    font-weight: 700;
-    color: #ff0000;
+    font-weight: 700 !important;
+    color: #ff0000 !important;
 }
 .legenda {
     display: flex;
