@@ -383,9 +383,243 @@ td:nth-child(2) {
         height: 15px;
     }
 }
+
+.naglowek {
+    justify-self: center;
+    height: 70px;
+}
+.filtry {
+    width: 400px;
+    float: right;
+}
 .aktualizacja {
     margin-bottom: 15px;
+    width: 300px;
     text-align: center;
+    float: left;
     font-size: 14px;
     font-weight: 600;
+}
+
+.legenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kolor {
+    width: 18px;
+    height: 18px;
+
+    display: inline-block;
+
+    border-radius: 5px;
+}
+
+.dzisiaj-kolor {
+    background-color: #fef3c7;
+    border: 2px solid #f59e0b;
+}
+
+.nastepna-kolor {
+    background-color: #bbf7d0;
+    border: 2px solid #4ade80;
+}
+
+.aktualna-kolor {
+    background: linear-gradient(135deg, #83dae6, #25d5ec);
+    border: 2px solid #12c7df;
+}
+
+
+/* ===== ODLICZANIE ===== */
+
+.odliczanie {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    gap: 20px;
+
+    width: min(1000px, calc(100% - 30px));
+
+    margin: 30px auto 20px;
+}
+
+
+/* ===== TIMER ===== */
+
+.timer {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 25px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    color: #1e293b;
+    text-align: center;
+}
+
+#gora,
+#srodek,
+#dol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#wolny,
+#wolneDni,
+#matury,
+#lekcja {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* ===== DNI WOLNE ===== */
+
+.dniWolne {
+    flex: 2;
+    min-width: 0;
+
+    margin: 0;
+    padding: 20px 25px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dniWolne h2 {
+    margin: 0 0 15px;
+
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #1e293b;
+}
+
+.dniWolne ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.dniWolne li {
+    margin-bottom: 9px;
+    padding-left: 5px;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #475569;
+}
+
+.dniWolne li:last-child {
+    margin-bottom: 0;
+}
+
+.dniWolne li::marker {
+    color: #64748b;
+}
+
+
+/* ===== TABLET / TELEFON ===== */
+
+@media (max-width: 700px) {
+
+    .legenda {
+        flex-wrap: wrap;
+
+        gap: 12px 18px;
+
+        margin-top: 15px;
+
+        font-size: 12px;
+    }
+
+    .kolor {
+        width: 15px;
+        height: 15px;
+    }
+
+    .odliczanie {
+        flex-direction: column;
+
+        width: calc(100% - 30px);
+
+        gap: 15px;
+    }
+
+    .timer {
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+    #gora,
+    #srodek,
+    #dol {
+        font-size: 14px;
+    }
+
+    #wolny,
+    #wolneDni,
+    #matury {
+        font-size: 23px;
+    }
+
+    .dniWolne {
+        padding: 15px 18px;
+    }
+
+    .dniWolne h2 {
+        margin-bottom: 12px;
+
+        font-size: 17px;
+    }
+
+    .dniWolne ul {
+        padding-left: 20px;
+    }
+
+    .dniWolne li {
+        margin-bottom: 7px;
+        padding-left: 3px;
+
+        font-size: 12px;
+    }
 }

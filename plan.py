@@ -152,7 +152,10 @@ for wiersz in wiersze:
 
         if lekcja == "wf-j2":
             continue
-
+        if lekcja.startswith("religia"):
+            nauczyciel = 'T. Poćwiardowski'
+        if lekcja == "wf":
+            nauczyciel = 'Ł. Dolski'
         if lekcja.endswith("-1/2"):
             lekcja = "brak"
 
@@ -162,8 +165,7 @@ for wiersz in wiersze:
         if lekcja[:5] == "wf-j1":
             lekcja = "wf"
 
-        if lekcja == "brak" or nauczyciel is None or lekcja.startswith("religia"):
-            lekcja = "brak"
+        if lekcja == "brak":
             nauczyciel = "brak"
             sala = "brak"
 

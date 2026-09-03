@@ -9,10 +9,10 @@ rok = dzisiaj.year
 pierwszy_dzien = date(rok, 8, 31)
 tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
 
-dyzurny1=tydzien
-if dyzurny1>17:
-    dyzurny1=-17
-dyzurny2=35-dyzurny1
+dyzurny1 = tydzien
+if dyzurny1 > 17:
+    dyzurny1 = -17
+dyzurny2 = 35 - dyzurny1
 
 nazwaFolderu = 'tydzien_' + str(tydzien)
 folderNazwa = folder / 'data' / nazwaFolderu
@@ -105,6 +105,25 @@ ostatniaAktualizacjaTekst = ostatniaAktualizacja.strftime(
     "%d.%m.%Y, %H:%M"
 )
 
+dni_wolne = [
+    "14 października — Dzień Nauczyciela",
+    "31 października - 2 listopada — Wszystkich Świętych",
+    "11 listopada — Narodowe Święto Niepodległości",
+    "24 grudnia - 6 stycznia — przerwa świąteczna",
+    "8 stycznia – dni dyrektorskie",
+    "15 lutego - 28 lutego — ferie zimowe",
+    "25 marca - 30 marca — wiosenna przerwa świąteczna",
+    "14 kwietnia – wystawienie ocen końcowych",
+    "30 kwietnia – zakończenie roku szkolnego",
+    "4 maja - 7 maja – matury",
+    "17 maja – matura informatyka"
+]
+
+lista_dni_wolnych = ""
+
+for dzien_wolny in dni_wolne:
+    lista_dni_wolnych += f"                <li>{dzien_wolny}</li>\n"
+
 with open(nazwa, 'w', encoding='UTF-8') as plik:
     html = f"""<!DOCTYPE html>
 <html lang="pl">
@@ -116,12 +135,13 @@ with open(nazwa, 'w', encoding='UTF-8') as plik:
 </head>
 <body>
 
-    <div class="aktualizacja">
-        Zaaktualizowano plan: {ostatniaAktualizacjaTekst}
-    </div> 
-    <div class="aktualizacja">
-        Numery dyżurnych: {dyzurny1, dyzurny2}
+    <div class="naglowek">
+        <div class="aktualizacja">
+            Zaaktualizowano plan: {ostatniaAktualizacjaTekst}
+            Numery dyżurnych: {dyzurny1, dyzurny2}
+        </div>
     </div>
+
     <table>
         <tbody>
             <tr>
@@ -188,7 +208,7 @@ with open(nazwa, 'w', encoding='UTF-8') as plik:
 
             licznik = 0
 
-    html += """</tr>
+    html += f"""</tr>
         </tbody>
     </table>
 
@@ -207,6 +227,36 @@ with open(nazwa, 'w', encoding='UTF-8') as plik:
             <span class="kolor aktualna-kolor"></span>
             Aktualna lekcja
         </span>
+    </div>
+
+    <div class="odliczanie">
+        <div class="timer">
+            <div id="gora">
+                <span>Odliczanie do najbliższej lekcji:</span>
+                <span id="lekcja"></span><br>
+            </div>
+
+            <div id="gora">
+                <span>Odliczanie do najbliższego weekendu:</span>
+                <span id="wolny"></span><br>
+            </div>
+
+            <div id="srodek">
+                <span>Odliczanie do najbliższego wolnego:</span>
+                <span id="wolneDni"></span><br>
+            </div>
+
+            <div id="dol">
+                <span>Odliczanie do początku matur:</span>
+                <span id="matury"></span>
+            </div>
+        </div>
+
+        <div class="dniWolne">
+            <h2>Dni wolne</h2>
+            <ul>
+{lista_dni_wolnych}            </ul>
+        </div>
     </div>
 
     <script src="./script.js"></script>
