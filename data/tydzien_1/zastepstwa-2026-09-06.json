@@ -1,417 +1,105 @@
 [
     [
-        "P Augustyn",
+        "W Hermanowski",
         "0",
-        "2 D(1)",
-        "316",
-        "M. Baranowska",
-        "złączenie grup"
-    ],
-    [
-        "P Augustyn",
-        "1",
-        "2 D(1)",
-        "316",
-        "M. Baranowska",
-        "złączenie grup"
-    ],
-    [
-        "P Augustyn",
-        "2",
-        "2 D(1)",
-        "316",
-        "M. Baranowska",
-        "złączenie grup"
-    ],
-    [
-        "P Augustyn",
-        "3",
-        "2 B(3)",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "(grupa przychodzi w poniedziałek na 7.05 do sali 316)"
-    ],
-    [
-        "P Augustyn",
-        "4",
-        "2 B(3)",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "P Augustyn",
-        "5",
-        "2 B(3)",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "P Augustyn",
-        "6",
-        "2 B(3)",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "P Augustyn",
-        "7",
-        "2 D(2)",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "Grupa przychodzi na 7.05 do sali 316"
-    ],
-    [
-        "P Augustyn",
-        "8",
-        "2 D(2)",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "Grupa przychodzi na 7.05 do sali 316"
-    ],
-    [
-        "P Augustyn",
-        "9",
-        "2 D(2)",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "Grupa przychodzi na 7.05 do sali 316"
-    ],
-    [
-        "D Czyżewski",
-        "2",
-        "Wychowanie fizyczne",
-        "Zajęcia Świetlicowe",
-        "brak",
-        "uczniowie z 4f świetlica; uczniowie z 4A przychodzą na 4 h lek."
-    ],
-    [
-        "D Czyżewski",
-        "3",
-        "Wychowanie fizyczne",
-        "Zajęcia Świetlicowe",
-        "brak",
-        "uczniowie z 4f świetlica; uczniowie z 4A przychodzą na 4 h lek."
-    ],
-    [
-        "D Czyżewski",
-        "4",
-        "2 F(1)",
-        "Bez konsekwencji (nieobecny oddział nauczyciela)",
-        "brak",
-        "brak"
-    ],
-    [
-        "D Czyżewski",
-        "5",
-        "2 F(1)",
-        "Bez konsekwencji (nieobecny oddział nauczyciela)",
-        "brak",
-        "brak"
-    ],
-    [
-        "D Gierczak-Pliszka",
-        "1",
-        "2 B",
-        "109",
-        "D. Wróblewska",
-        "brak"
-    ],
-    [
-        "D Gierczak-Pliszka",
-        "4",
-        "5 D",
-        "202",
-        "D. Wróblewska",
-        "brak"
-    ],
-    [
-        "D Gierczak-Pliszka",
-        "5",
-        "5 D",
-        "202",
-        "D. Wróblewska",
-        "brak"
-    ],
-    [
-        "D Gierczak-Pliszka",
-        "6",
-        "5 D",
-        "202",
-        "D. Wróblewska",
-        "brak"
-    ],
-    [
-        "D Gierczak-Pliszka",
-        "7",
-        "4 E",
-        "109",
-        "D. Wróblewska",
-        "brak"
-    ],
-    [
-        "D Gierczak-Pliszka",
-        "8",
-        "4 E",
-        "109",
-        "D. Wróblewska",
-        "brak"
-    ],
-    [
-        "K Kołodziejski",
-        "0",
-        "1 A",
+        "2 I(2)",
         "Uczniowie przychodzą później",
         "brak",
         "brak"
     ],
     [
-        "K Kołodziejski",
+        "W Hermanowski",
         "1",
-        "4 I",
-        "106",
-        "R. Korytek",
-        "za nieobecny oddział; sys.baz.dan."
+        "2 I(2)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
     ],
     [
-        "K Kołodziejski",
+        "W Hermanowski",
         "2",
-        "3 F",
-        "Bez konsekwencji (nieobecny oddział nauczyciela)",
-        "brak",
-        "brak"
-    ],
-    [
-        "K Kołodziejski",
-        "3",
-        "5 D",
-        "211",
-        "R. Krzemiński",
-        "za nieobecny oddział; WF - teoria"
-    ],
-    [
-        "K Kołodziejski",
-        "4",
-        "1 D",
-        "211",
-        "A. Sieracki",
-        "za nieobecny oddział; zaj. z wych."
-    ],
-    [
-        "K Kołodziejski",
-        "5",
-        "3 H",
-        "211",
-        "M. Zelek",
-        "za ostatnią lekcję; edukacja obywatelska"
-    ],
-    [
-        "K Kołodziejski",
-        "6",
-        "4 D",
-        "221",
-        "J. Mrozińska",
-        "za nieobecny oddział; informatyka - grupa 2/2; grupa 1/2 zwolniona do domu"
-    ],
-    [
-        "K Kołodziejski",
-        "7",
-        "4 A",
-        "211",
-        "I. Kowalska",
-        "za nieobecny oddział; grupa wf1 j. niemiecki; grupa wf2 zwolniona do domu"
-    ],
-    [
-        "P Leda",
-        "2",
-        "1 B",
-        "Hala2",
-        "R. Krzemiński",
-        "za nieobecny oddział; grupa 1/2 wf; grupa 2/2 przychodzi na 4 h lek. (osoby nie powiadomione świetlica)"
-    ],
-    [
-        "P Leda",
-        "3",
-        "1 B",
-        "217",
-        "R. Śmidoda",
-        "za nieobecny oddział; grupa 1/2 informatyka (sala 217); grupa 2/2 przychodzi na 4 h lek. (osoby nie powiadomione świetlica)"
-    ],
-    [
-        "P Leda",
-        "5",
-        "5 A",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "P Leda",
-        "6",
-        "5 A",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "A Mordaka-Markiewicz",
-        "4",
-        "1 A",
-        "pc5",
-        "J. Mrozińska",
-        "za nieobecny oddział; grupa 3/3 informatyka w sali pc5; pozostałe grupy (nie Pana Lubiewskiego) zwolnione do domu"
-    ],
-    [
-        "A Mordaka-Markiewicz",
-        "5",
-        "2 D",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "grupa 2/3 przychodzi na 7.05"
-    ],
-    [
-        "A Mordaka-Markiewicz",
-        "6",
-        "2 D",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "A Mordaka-Markiewicz",
-        "7",
         "1 I",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "A Mordaka-Markiewicz",
-        "8",
-        "1 B",
-        "Uczniowie zwolnieni do domu",
-        "brak",
-        "brak"
-    ],
-    [
-        "A Nowak",
-        "0",
-        "3 A",
-        "Uczniowie przychodzą później",
-        "brak",
-        "brak"
-    ],
-    [
-        "A Nowak",
-        "2",
-        "5 F",
-        "Bez konsekwencji (nieobecny oddział nauczyciela)",
-        "brak",
-        "brak"
-    ],
-    [
-        "A Nowak",
-        "3",
-        "5 F",
-        "Bez konsekwencji (nieobecny oddział nauczyciela)",
-        "brak",
-        "brak"
-    ],
-    [
-        "A Nowak",
-        "4",
-        "3 D",
-        "111",
-        "M. Kucharska",
-        "za nieobecny oddział; matematyka"
-    ],
-    [
-        "A Nowak",
-        "5",
-        "4 E",
-        "106",
-        "P. Kulpa",
-        "za nieobecny oddział; j. polski"
-    ],
-    [
-        "A Nowak",
-        "6",
-        "2 A",
         "218",
         "A. Sieracki",
-        "za nieobecny oddział na 8 h lek.; urzadz.elekt, sala 218"
+        "urz.tech.kom"
     ],
     [
-        "T Poćwiardowski",
-        "0",
-        "Religia",
-        "Uczniowie przychodzą później",
-        "brak",
-        "brak"
-    ],
-    [
-        "T Poćwiardowski",
-        "1",
-        "Religia",
-        "Uczniowie przychodzą później",
-        "brak",
-        "brak"
-    ],
-    [
-        "T Poćwiardowski",
-        "2",
+        "W Hermanowski",
+        "3",
         "1 F(1)",
-        "Uczniowie przychodzą później",
-        "brak",
-        "brak"
-    ],
-    [
-        "K Smoleń",
-        "1",
-        "1 A",
-        "Uczniowie przychodzą później",
-        "brak",
-        "brak"
-    ],
-    [
-        "K Smoleń",
-        "3",
-        "1 H",
-        "105",
-        "D. Wróblewska",
-        "za nieobecny oddział; j. polski"
-    ],
-    [
-        "K Smoleń",
-        "5",
-        "1 B",
-        "218",
-        "A. Sieracki",
-        "za nieobecny oddział"
-    ],
-    [
-        "K Smoleń",
-        "6",
-        "1 F",
-        "217",
+        "W-4",
         "K. Łabuńska",
-        "za nieobecny oddział; ASO - teoria (laptopy)"
+        "ASO"
     ],
     [
-        "K Smoleń",
-        "7",
-        "1 D",
-        "Uczniowie zwolnieni do domu",
+        "W Hermanowski",
+        "4",
+        "1 F(1)",
+        "302",
+        "A. Leszczyńska",
+        "j. angielski"
+    ],
+    [
+        "W Hermanowski",
+        "5",
+        "2 F(2)",
+        "Zajęcia Świetlicowe",
         "brak",
+        "brak"
+    ],
+    [
+        "W Hermanowski",
+        "6",
+        "2 F(2)",
+        "W-4",
+        "A. Sieracki",
+        "brak"
+    ],
+    [
+        "W Hermanowski",
+        "7",
+        "2 F(1)",
+        "W-4",
+        "A. Sieracki",
+        "brak"
+    ],
+    [
+        "W Hermanowski",
+        "8",
+        "2 F(1)",
+        "W-4",
+        "A. Sieracki",
         "brak"
     ],
     [
         "t Vacat",
-        "8",
-        "3 A(1)",
-        "pc5",
+        "1",
+        "3 D(1)",
+        "221",
+        "M. Bzdawka",
+        "brak"
+    ],
+    [
+        "t Vacat",
+        "2",
+        "3 D(2)",
+        "221",
+        "M. Bzdawka",
+        "brak"
+    ],
+    [
+        "t Vacat",
+        "3",
+        "5 I(2)",
+        "221",
+        "M. Bzdawka",
+        "brak"
+    ],
+    [
+        "t Vacat",
+        "4",
+        "5 I(2)",
+        "221",
         "M. Bzdawka",
         "brak"
     ]
