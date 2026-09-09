@@ -68,7 +68,6 @@ if len(tr)>4:
     tr = zupa.find_all('tr')[1:]
     tymczasowe=[]
     for i in tr:
-        przerwa = i.find_all('td', class_='st15')
         naglowki = i.find_all('td', class_='st1')
         info = i.find_all('td', string=lambda text: 'opis' in text)
         if naglowki:
@@ -76,7 +75,7 @@ if len(tr)>4:
             licznik+=1
         if nauczyciel:
             tymczasowe.append(nauczyciel)
-            if not naglowki and not przerwa and not info:
+            if not naglowki and not info:
                 for td in i.find_all('td'):
                     tekst = td.get_text(strip=True).replace('\xa0', '').strip()
                     if not tekst:
