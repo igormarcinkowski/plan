@@ -1,6 +1,7 @@
 from pathlib import Path
 from datetime import date, datetime
 import json
+from zoneinfo import ZoneInfo
 
 folder = Path(__file__).parent
 
@@ -100,6 +101,10 @@ godziny = {
 }
 
 max_lekcja = max(int(i[0]) for i in danePlan)
+
+ostatniaAktualizacja = ostatniaAktualizacja.astimezone(
+    ZoneInfo("Europe/Warsaw")
+)
 
 ostatniaAktualizacjaTekst = ostatniaAktualizacja.strftime(
     "%d.%m.%Y, %H:%M"
