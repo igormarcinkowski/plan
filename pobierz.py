@@ -1,19 +1,28 @@
 from pathlib import Path
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import json
 from zoneinfo import ZoneInfo
-
-folder = Path(__file__).parent
+import sys
 
 dzisiaj = date.today()
-rok = dzisiaj.year
-pierwszy_dzien = date(rok, 8, 31)
-tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
+teraz = datetime.now()
 
-dyzurny1 = tydzien
-if dyzurny1 > 17:
-    dyzurny1 = -17
-dyzurny2 = 35 - dyzurny1
+if dzisiaj.weekday() == 5:
+    sys.exit(0)
+
+if dzisiaj.weekday() == 6 and teraz.hour < 14:
+    sys.exit(0)
+
+if dzisiaj.weekday() == 6:
+    data_docelowa = dzisiaj + timedelta(days=1)
+else:
+    data_docelowa = dzisiaj
+
+rok_szkolny = data_docelowa.year if data_docelowa.month >= 8 else data_docelowa.year - 1
+pierwszy_dzien = date(rok_szkolny, 8, 31)
+tydzien = (data_docelowa - pierwszy_dzien).days // 7 + 1
+
+folder = Path(__file__).parent
 
 nazwaFolderu = 'tydzien_' + str(tydzien)
 folderNazwa = folder / 'data' / nazwaFolderu
@@ -53,7 +62,13 @@ for plik in folderNazwa.glob("zastepstwa-*.json"):
     with open(plik, 'r', encoding='utf-8') as zastepstwa:
         daneZastepstwa = json.load(zastepstwa)
 
+    if not isinstance(daneZastepstwa, list):
+        continue
+
     for j in daneZastepstwa:
+        if len(j) < 6:
+            continue
+
         if j[2] in ['5 H', '5 H(2)']:
             for i in danePlan:
                 if (
@@ -75,7 +90,9 @@ for plik in folderNazwa.glob("zastepstwa-*.json"):
 
 sciezkaAktualizacji = folder / "data" / "ostatnia_aktualizacja.txt"
 
-ostatniaAktualizacja = datetime.now()
+ostatniaAktualizacja = datetime.now(
+    ZoneInfo("Europe/Warsaw")
+)
 
 with open(sciezkaAktualizacji, 'w', encoding='utf-8') as plik:
     plik.write(
@@ -84,6 +101,17 @@ with open(sciezkaAktualizacji, 'w', encoding='utf-8') as plik:
 
 nazwa = folder / "data" / "strona" / "index.html"
 nazwa.parent.mkdir(parents=True, exist_ok=True)
+
+ostatniaAktualizacjaTekst = ostatniaAktualizacja.strftime(
+    "%d.%m.%Y, %H:%M"
+)
+
+dyzurny1 = tydzien
+
+if dyzurny1 > 17:
+    dyzurny1 = -17
+
+dyzurny2 = 35 - dyzurny1
 
 godziny = {
     0: ("07:05", "07:50"),
@@ -101,14 +129,6 @@ godziny = {
 }
 
 max_lekcja = max(int(i[0]) for i in danePlan)
-
-ostatniaAktualizacja = ostatniaAktualizacja.astimezone(
-    ZoneInfo("Europe/Warsaw")
-)
-
-ostatniaAktualizacjaTekst = ostatniaAktualizacja.strftime(
-    "%d.%m.%Y, %H:%M"
-)
 
 dni_wolne = [
     "14 października — Dzień Nauczyciela",

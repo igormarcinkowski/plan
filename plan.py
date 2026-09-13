@@ -1,15 +1,41 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
+import sys
+
+dzisiaj = date.today()
+teraz = datetime.now()
+
+if dzisiaj.weekday() == 5:
+    sys.exit(0)
+
+if dzisiaj.weekday() == 6 and teraz.hour < 14:
+    sys.exit(0)
+
+if dzisiaj.weekday() == 6:
+    data_docelowa = dzisiaj + timedelta(days=1)
+else:
+    data_docelowa = dzisiaj
+
+rok_szkolny = data_docelowa.year if data_docelowa.month >= 8 else data_docelowa.year - 1
+pierwszy_dzien = date(rok_szkolny, 8, 31)
+tydzien = (data_docelowa - pierwszy_dzien).days // 7 + 1
+
+nazwaFolderu = 'tydzien_' + str(tydzien)
+folder = Path(__file__).parent
 
 url = 'https://plan.zse.bydgoszcz.pl/plany/o29.html'
 response = requests.get(url, timeout=30)
 response.raise_for_status()
 response.encoding = 'utf-8'
+
 soup = BeautifulSoup(response.text, 'html.parser')
-plan = soup.find('table', class_= 'tabela')
+plan = soup.find('table', class_='tabela')
+
+if plan is None:
+    raise Exception("Nie znaleziono tabeli planu")
 
 nauczyciele = {
     "Ch": "M. Chabowski",
@@ -109,18 +135,25 @@ nauczyciele = {
     "Ib": "I.Vacat",
     "BV": "t.Vacat tech"
 }
-licznik=0
+
+licznik = 0
 wiersze = plan.find_all('tr')[1:]
-dane=[]
-dni = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek']
+dane = []
+
+dni = [
+    'Poniedziałek',
+    'Wtorek',
+    'Środa',
+    'Czwartek',
+    'Piątek'
+]
 
 for wiersz in wiersze:
     numer = wiersz.find('td', class_='nr').get_text()
     lekcje = wiersz.find_all('td', class_='l')
 
     for dzien in range(5):
-        dzieńTygodnia = dni[dzien]
-
+        dzienTygodnia = dni[dzien]
         komorka = lekcje[dzien]
 
         wszystkie_przedmioty = komorka.find_all("span", class_="p")
@@ -129,6 +162,7 @@ for wiersz in wiersze:
 
         for i, span in enumerate(wszystkie_przedmioty):
             tekst = span.get_text(strip=True)
+
             if tekst.endswith("2/2"):
                 wybrany_nr = i
                 break
@@ -142,20 +176,25 @@ for wiersz in wiersze:
         sale_html = komorka.find_all("a", class_="s")
 
         nauczyciel = None
+
         if wybrany_nr < len(nauczyciele_html):
             nauczyciel = nauczyciele_html[wybrany_nr].get_text()
             nauczyciel = nauczyciele.get(nauczyciel, "-")
 
         sala = None
+
         if wybrany_nr < len(sale_html):
             sala = sale_html[wybrany_nr].get_text()
 
         if lekcja == "wf-j2":
             continue
+
         if lekcja.startswith("religia"):
             nauczyciel = 'T. Poćwiardowski'
+
         if lekcja == "wf":
             nauczyciel = 'Ł. Dolski'
+
         if lekcja.endswith("-1/2"):
             lekcja = "brak"
 
@@ -172,7 +211,13 @@ for wiersz in wiersze:
         if lekcja == "brak" and nauczyciel == "brak" and sala == "brak":
             licznik += 1
 
-        dane.append([numer, dzieńTygodnia, lekcja, nauczyciel, sala])
+        dane.append([
+            numer,
+            dzienTygodnia,
+            lekcja,
+            nauczyciel,
+            sala
+        ])
 
         if licznik == 5:
             for _ in range(5):
@@ -180,13 +225,8 @@ for wiersz in wiersze:
 
     licznik = 0
 
-dzisiaj = date.today()
-rok = dzisiaj.year
-pierwszy_dzien = date(rok, 8, 31)
-tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
-nazwaFolderu = 'tydzien_'+str(tydzien)
-folder = Path(__file__).parent
-nazwa = folder / 'data' / nazwaFolderu / f"plan.json"
+nazwa = folder / 'data' / nazwaFolderu / 'plan.json'
 nazwa.parent.mkdir(parents=True, exist_ok=True)
+
 with open(nazwa, 'w', encoding='utf-8') as plik:
-    plik.write(json.dumps(dane, ensure_ascii=False, indent=4))
+    json.dump(dane, plik, ensure_ascii=False, indent=4)

@@ -2,13 +2,28 @@ import requests
 from bs4 import BeautifulSoup
 import json
 from pathlib import Path
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
+import sys
 
 dzisiaj = date.today()
-rok = dzisiaj.year
-pierwszy_dzien = date(rok, 8, 31)
-tydzien = (dzisiaj - pierwszy_dzien).days // 7 + 1
-nazwaFolderu = 'tydzien_'+str(tydzien)
+teraz = datetime.now()
+
+if dzisiaj.weekday() == 5:
+    sys.exit(0)
+
+if dzisiaj.weekday() == 6 and teraz.hour < 14:
+    sys.exit(0)
+
+if dzisiaj.weekday() == 6:
+    data_docelowa = dzisiaj + timedelta(days=1)
+else:
+    data_docelowa = dzisiaj
+
+rok_szkolny = data_docelowa.year if data_docelowa.month >= 8 else data_docelowa.year - 1
+pierwszy_dzien = date(rok_szkolny, 8, 31)
+tydzien = (data_docelowa - pierwszy_dzien).days // 7 + 1
+
+nazwaFolderu = 'tydzien_' + str(tydzien)
 
 folder = Path(__file__).parent
 
@@ -17,76 +32,103 @@ url = 'https://zastepstwa.zse.bydgoszcz.pl/'
 strona = requests.get(url, timeout=30)
 strona.raise_for_status()
 strona.encoding = 'ISO-8859-2'
+
 zupa = BeautifulSoup(strona.text, 'html.parser')
-tabela = zupa.find_all('table')
+
 nauczyciele = zupa.find_all('td', class_='st1')
-nauczycieleLista=[]
 tr = zupa.find_all('tr')
 
 nobr = zupa.find('nobr')
-dni = ['poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek']
+
+dni = [
+    'poniedziałek',
+    'wtorek',
+    'środa',
+    'czwartek',
+    'piątek'
+]
+
 dzien_tygodnia = None
+
 if nobr:
     pierwsza_linia = nobr.get_text("\n", strip=True).split("\n")[0]
+
     for dzien in dni:
         if dzien in pierwsza_linia.lower():
             dzien_tygodnia = str(dni.index(dzien))
             break
-if int(dzien_tygodnia)==date.today().weekday():
-    zmienna = date.today()
-else:
-    zmienna = date.today() + timedelta(days=1)
-nazwa = folder / 'data' / nazwaFolderu / f"zastepstwa-{zmienna}.json"
-nazwa.parent.mkdir(parents=True, exist_ok=True)
 
 if dzien_tygodnia is None:
     raise Exception("Nie udało się znaleźć dnia tygodnia na stronie zastępstw")
-if len(tr)>4:
-    licznik=0
+
+if int(dzien_tygodnia) != data_docelowa.weekday():
+    raise Exception(
+        f"Strona zastępstw dotyczy innego dnia: {dzien_tygodnia}, "
+        f"oczekiwano: {data_docelowa.weekday()}"
+    )
+
+nazwa = folder / 'data' / nazwaFolderu / f"zastepstwa-{data_docelowa}.json"
+nazwa.parent.mkdir(parents=True, exist_ok=True)
+
+if len(tr) > 4:
+    nauczycieleLista = []
+
     for i in nauczyciele:
         nauczycieleLista.append(i.get_text(strip=True))
-        licznik+=1
+
     for i in range(len(nauczycieleLista)):
-        pomoc=''
-        pomoc=str(nauczycieleLista[i].split(' ')[0][0]) + ' ' + str(nauczycieleLista[i].split(' ')[1])
-        nauczycieleLista[i]=pomoc
+        czesci = nauczycieleLista[i].split(' ')
 
-    godziny=[]
-    for i in nauczyciele:
-        godziny.append([i.get_text(strip=True)])
-    # for i in godziny:
-    #     print(i)
+        if len(czesci) >= 2:
+            nauczycieleLista[i] = czesci[0][0] + ' ' + czesci[1]
 
-    wiersze = zupa.find_all('tr')
-
-    informacje = zupa.find('td', class_='st0')
-
-    zastepstwa=[]
-    licznik=0
-    nauczyciel=None
+    zastepstwa = []
+    licznik = 0
+    nauczyciel = None
 
     tr = zupa.find_all('tr')[1:]
-    tymczasowe=[]
+    tymczasowe = []
+
     for i in tr:
         naglowki = i.find_all('td', class_='st1')
-        info = i.find_all('td', string=lambda text: 'opis' in text)
+        info = i.find_all(
+            'td',
+            string=lambda text: text and 'opis' in text
+        )
+
         if naglowki:
+            if licznik >= len(nauczycieleLista):
+                continue
+
             nauczyciel = nauczycieleLista[licznik]
-            licznik+=1
+            licznik += 1
+
         if nauczyciel:
             tymczasowe.append(nauczyciel)
+
             if not naglowki and not info:
                 for td in i.find_all('td'):
-                    tekst = td.get_text(strip=True).replace('\xa0', '').strip()
+                    tekst = td.get_text(strip=True)
+                    tekst = tekst.replace('\xa0', '').strip()
+
                     if not tekst:
                         tekst = 'brak'
+
                     tymczasowe.append(tekst)
-        if not len(tymczasowe)<2:
+
+        if len(tymczasowe) >= 2:
             tymczasowe[2:3] = tymczasowe[2].split(' - ')
             zastepstwa.append(tymczasowe)
-        tymczasowe=[]
+
+        tymczasowe = []
 
     with open(nazwa, 'w', encoding='utf-8') as plik:
-        plik.write(json.dumps(zastepstwa, ensure_ascii=False, indent=4))
+        json.dump(
+            zastepstwa,
+            plik,
+            ensure_ascii=False,
+            indent=4
+        )
 else:
-    zastepstwa=''
+    with open(nazwa, 'w', encoding='utf-8') as plik:
+        json.dump('', plik, ensure_ascii=False)
