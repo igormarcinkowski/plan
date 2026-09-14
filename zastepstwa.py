@@ -53,19 +53,29 @@ dzien_tygodnia = None
 if nobr:
     pierwsza_linia = nobr.get_text("\n", strip=True).split("\n")[0]
 
-    for dzien in dni:
+    for i, dzien in enumerate(dni):
         if dzien in pierwsza_linia.lower():
-            dzien_tygodnia = str(dni.index(dzien))
+            dzien_tygodnia = i
             break
 
 if dzien_tygodnia is None:
-    raise Exception("Nie udało się znaleźć dnia tygodnia na stronie zastępstw")
-
-if int(dzien_tygodnia) != data_docelowa.weekday():
     raise Exception(
-        f"Strona zastępstw dotyczy innego dnia: {dzien_tygodnia}, "
-        f"oczekiwano: {data_docelowa.weekday()}"
+        "Nie udało się znaleźć dnia tygodnia na stronie zastępstw"
     )
+
+# Jeśli strona pokazuje inny dzień niż dzisiaj,
+# przesuwamy data_docelowa na dzień pokazany na stronie.
+if dzien_tygodnia != data_docelowa.weekday():
+
+    # Pozwalamy tylko na przejście na następny dzień.
+    if dzien_tygodnia == data_docelowa.weekday() + 1:
+        data_docelowa += timedelta(days=1)
+    else:
+        raise Exception(
+            f"Strona zastępstw dotyczy innego dnia: "
+            f"{dni[dzien_tygodnia]}, "
+            f"oczekiwano: {dni[data_docelowa.weekday()]}"
+        )
 
 nazwa = folder / 'data' / nazwaFolderu / f"zastepstwa-{data_docelowa}.json"
 nazwa.parent.mkdir(parents=True, exist_ok=True)
