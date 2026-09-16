@@ -19,38 +19,115 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Start checkout
+        run: |
+          date
+
       - name: Pobierz repozytorium
         uses: actions/checkout@v4
+
+      - name: Koniec checkout
+        run: |
+          date
+
+      - name: Start setup Python
+        run: |
+          date
 
       - name: Ustaw Pythona
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
+      - name: Koniec setup Python
+        run: |
+          date
+          python --version
+          pip --version
+
       - name: Zainstaluj biblioteki
-        run: pip install -r requirements.txt
+        run: |
+          echo "START pip install"
+          date
+          time pip install -r requirements.txt
+          echo "KONIEC pip install"
+          date
 
       - name: Pobierz plan
-        run: python plan.py
+        run: |
+          echo "START plan.py"
+          date
+          time python plan.py
+          echo "KONIEC plan.py"
+          date
 
       - name: Pobierz zastępstwa
-        run: python zastepstwa.py
+        run: |
+          echo "START zastepstwa.py"
+          date
+          time python zastepstwa.py
+          echo "KONIEC zastepstwa.py"
+          date
 
       - name: Wygeneruj stronę
-        run: python pobierz.py
+        run: |
+          echo "START pobierz.py"
+          date
+          time python pobierz.py
+          echo "KONIEC pobierz.py"
+          date
+
+      - name: Sprawdź dane
+        run: |
+          echo "ROZMIAR DATA"
+          du -sh data || true
+
+          echo "LICZBA PLIKÓW"
+          find data -type f | wc -l
+
+      - name: Start git
+        run: |
+          echo "START git"
+          date
 
       - name: Zapisz zmiany
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "Automatyczna aktualizacja danych"
-          git push
+
+          echo "START git add"
+          time git add data/
+
+          git status --short
+
+          if git diff --cached --quiet; then
+            echo "Brak zmian do zapisania."
+          else
+            echo "START git commit"
+            time git commit -m "Automatyczna aktualizacja danych"
+
+            echo "START git push"
+            date
+            time git push
+          fi
+
+          echo "KONIEC git"
+          date
+
+      - name: Start upload strony
+        run: |
+          echo "START upload"
+          date
 
       - name: Przygotuj stronę
         uses: actions/upload-pages-artifact@v3
         with:
           path: data/strona
+
+      - name: Koniec upload strony
+        run: |
+          echo "KONIEC upload"
+          date
 
   deploy:
     needs: update
@@ -65,6 +142,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Start deploy
+        run: |
+          echo "START deploy"
+          date
+
       - name: Opublikuj stronę
         id: deployment
         uses: actions/deploy-pages@v5
+
+      - name: Koniec deploy
+        run: |
+          echo "KONIEC deploy"
+          date
