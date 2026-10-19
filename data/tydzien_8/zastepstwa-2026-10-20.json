@@ -1,0 +1,331 @@
+[
+    [
+        "M Cierzniakowska",
+        "0",
+        "5 H(1)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "1",
+        "5 H(1)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "2",
+        "4 H(1)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "3",
+        "4 H(1)",
+        "Uczniowie przychodzą później",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "4",
+        "4 H(2)",
+        "pc5",
+        "M. Kantorska",
+        "informatyka; za nieobecny oddział"
+    ],
+    [
+        "M Cierzniakowska",
+        "5",
+        "4 H(2)",
+        "204",
+        "K. Gałek-Stachura",
+        "j. angielski; za nieobecny oddział"
+    ],
+    [
+        "M Cierzniakowska",
+        "6",
+        "2 H",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "7",
+        "2 H",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "8",
+        "3 H",
+        "214",
+        "I. Dziemitko",
+        "matematyka; za nieobecny oddział"
+    ],
+    [
+        "M Cierzniakowska",
+        "9",
+        "4 F(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "10",
+        "4 F(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Cierzniakowska",
+        "brak",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "4",
+        "5 H",
+        "108",
+        "A. Dembczyńska",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "5",
+        "5 H",
+        "108",
+        "A. Dembczyńska",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "8",
+        "4 E",
+        "108",
+        "D. Wróblewska",
+        "brak"
+    ],
+    [
+        "D Gierczak-Pliszka",
+        "brak",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "W Korput",
+        "5",
+        "5 B",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "W Korput",
+        "7",
+        "5 H(2)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "W Korput",
+        "8",
+        "5 H(2)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "W Korput",
+        "brak",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Krzemiński",
+        "5",
+        "4 F(1)",
+        "214",
+        "M. Geruzel",
+        "za nieobecny oddział"
+    ],
+    [
+        "R Krzemiński",
+        "6",
+        "3 H(1)",
+        "311",
+        "G. Kantowicz",
+        "za nieobecny oddział"
+    ],
+    [
+        "R Krzemiński",
+        "7",
+        "3 H(1)",
+        "311",
+        "G. Kantowicz",
+        "za nieobecny oddział"
+    ],
+    [
+        "R Krzemiński",
+        "9",
+        "1 F(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Krzemiński",
+        "10",
+        "1 F(1)",
+        "Uczniowie zwolnieni do domu",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Krzemiński",
+        "brak",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Rajkowska",
+        "3",
+        "5 I(1)",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Rajkowska",
+        "4",
+        "5 I(1)",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Rajkowska",
+        "5",
+        "2 I(1)",
+        "Zajęcia Świetlicowe",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Rajkowska",
+        "6",
+        "4 H(2)",
+        "302",
+        "K. Gałek-Stachura",
+        "j. angielski; za nieobecny oddział"
+    ],
+    [
+        "R Rajkowska",
+        "7",
+        "5 I",
+        "Bez konsekwencji (nieobecny oddział nauczyciela)",
+        "brak",
+        "brak"
+    ],
+    [
+        "R Rajkowska",
+        "8",
+        "3 D(2)",
+        "302",
+        "D. Wojtuń",
+        "za nieobecny oddział"
+    ],
+    [
+        "R Rajkowska",
+        "brak",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "M Tomczak",
+        "4",
+        "3 H",
+        "5",
+        "H. Kulczewska",
+        "za nieobecny oddział"
+    ],
+    [
+        "M Tomczak",
+        "5",
+        "2 D",
+        "309",
+        "G. Kantowicz",
+        "za nieobecny oddział"
+    ],
+    [
+        "M Tomczak",
+        "brak",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "I Vacat",
+        "6",
+        "1 A",
+        "108",
+        "A. Dembczyńska",
+        "brak"
+    ],
+    [
+        "I Vacat",
+        "brak",
+        "brak",
+        "brak",
+        "brak"
+    ],
+    [
+        "S Wilczyński",
+        "0",
+        "2 B(1)",
+        "W-6",
+        "Z. Smutek",
+        "brak"
+    ],
+    [
+        "S Wilczyński",
+        "1",
+        "2 B(1)",
+        "W-6",
+        "Z. Smutek",
+        "brak"
+    ],
+    [
+        "S Wilczyński",
+        "2",
+        "2 B(1)",
+        "W-6",
+        "Z. Smutek",
+        "brak"
+    ],
+    [
+        "S Wilczyński",
+        "3",
+        "2 B(1)",
+        "W-6",
+        "Z. Smutek",
+        "brak"
+    ]
+]
